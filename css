@@ -8,5 +8,7 @@
 
 body{
 background-image: url("iPhone_6.png");
-background-repeat: none;
+background-repeat:no-repeat;
+background-size: 30% auto;
+background-position: center center;
 }
