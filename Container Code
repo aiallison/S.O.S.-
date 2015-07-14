@@ -3,7 +3,7 @@
 #iphone{
 	position:fixed;
 	z-index: -1;
-	margin-top: -30px;
+	margin-top: -25px;
 }
 
 /* END OF ACTUAL IPHONE IMAGE */
@@ -26,28 +26,67 @@
 
 /* START OF CONTAINER & CONTENT */
 
-p {
-    width:310px;
-    font-size: 10px;
-    text-transform: uppercase;
-    float:left;
-    padding:10px; 
-	overflow: auto;
-	z-index: 1;
-	display: block;
-	position: absolute;
-}
-
 
 #container {
 	width: 300px;
 	height: 770px;
 	position: fixed;
 	left: 50%;
-	margin-top: 80px;
+	margin-top: 100px;
 	margin-left: -138px;
 	z-index: 0;
 	display: block;
 }
 
 /* END OF CONTAINER / CONTENT */
+
+#activatebutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 200px;
+}
+
+#centeractivatebutton {
+	display: block;
+	width: 435px;
+	height: 790px;
+	position: absolute;
+	left: 50%;
+	margin-left: -95px;
+	z-index: 2;
+}
+
+/* START OF LOGIN BUTTON */
+
+#loginbutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 15px;
+}
+
+#centerlogin {
+	display: block;
+	width: 435px;
+	height: 790px;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: -105px;
+}
+
+/* END OF LOGIN BUTTON */
+
+#banner {
+    width:310px;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    font-family: Georgia, Serif;
+    text-transform: uppercase;
+    text-align:center;
+    padding:10px; 
+	overflow: auto;
+	z-index: 1;
+	position: absolute;
+	margin-top: 105px;
+	margin-left: -55px;
+}
