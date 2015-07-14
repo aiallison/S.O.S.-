@@ -1,0 +1,18 @@
+#content {
+    width:310px;
+    font-size: 10px;
+    text-transform: uppercase;
+    float:left;
+    padding:10px; 
+	overflow: auto;
+    
+}
+
+#container {
+	width: 315px;
+	height: 750px;
+	position: fixed;
+	margin-left: 39%;
+	margin-top: 5%;
+	
+}
