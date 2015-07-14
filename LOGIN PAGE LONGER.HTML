@@ -45,6 +45,10 @@
 
 
 <script type='text/javascript'>//<![CDATA[ 
+
+var FirebaseTokenGenerator = require("firebase-token-generator");
+var tokenGenerator = new FirebaseTokenGenerator("XeZtYAL6gzU7iI4zrFXLWmrQxmO6FIcdPHCDpJvk");
+var token = tokenGenerator.createToken({ uid: "custom:1", some: "arbitrary", data: "here" });
  
 
 window.onload=function(){
@@ -52,7 +56,15 @@ window.onload=function(){
     "use strict";
 
     // the main firebase reference
-    var rootRef = new Firebase('https://sosapp.firebaseio.com/');
+var rootRef = new Firebase('https://sosapp.firebaseio.com/');
+ref.authWithCustomToken(AUTH_TOKEN, function(error, authData) {
+admin : true;
+  if (error) {
+    console.log("Login Failed!", error);
+  } else {
+    console.log("Login Succeeded!", authData);
+  }
+});
 
 // function funct1(evt)
 //{
