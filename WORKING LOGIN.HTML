@@ -6,10 +6,6 @@
   <title> - S.O.S.</title>
   
   <script type='text/javascript' src='/js/lib/dummy.js'></script>
-  
-  
-  
-  
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   
     
@@ -49,16 +45,13 @@
 
 window.onload=function(){
 
-(function (jQuery, Firebase, Path) {
+
+ // the main firebase reference
+    var rootRef = new Firebase('https://sosapp.firebaseio.com/');
+    
+	(function (jQuery, Firebase, Path) {
     "use strict";
 
-
-
-    // the main firebase reference
-    var rootRef = new Firebase('https://docs-sandbox.firebaseio.com/web/uauth');
-    
-    
-    
 
     // pair our routes to our form elements and controller
     var routeMap = {
@@ -120,9 +113,12 @@ window.onload=function(){
             if (err) {
                 deferred.reject(err);
             }
-
-            if (user) {
-                deferred.resolve(user);
+            else {
+            	var usersRef = rootRef.child("users");
+            	usersRef.set(userObj);
+				if (user) {
+					deferred.resolve(user);
+				}
             }
 
         });
@@ -234,13 +230,14 @@ window.onload=function(){
 
         // Form submission for registering
         form.on('submit', function (e) {
-
+        
             var userAndPass = $(this).serializeObject();
             var loginPromise = createUserAndLogin(userAndPass);
             e.preventDefault();
 
             handleAuthResponse(loginPromise, 'profile');
-
+            
+            console.log(loginPromise);
         });
 
     };
@@ -374,15 +371,64 @@ window.onload=function(){
         });
 
     });
+    
+//var ref = new Firebase("https://sosapp.firebaseio.com/web/saving-data/users");    
+	
+	var usersRef = rootRef.child("users");
+	//usersRef.set({
+				  
 
 }(window.jQuery, window.Firebase, window.Path))
+
+	var emailValue;
+	document.getElementById("getEmail").innerHTML = emailValue;
+	var passValue;
+	document.getElementById("getPass").innerHTML = passValue;
+	var nameValue;
+	document.getElementById("getName").innerHTML = nameValue;
+	var addressValue;
+	document.getElementById("getAddress").innerHTML = addressValue;
+	var zipValue;
+	document.getElementById("getZip").innerHTML = zipValue;
+	var phoneNumberValue;
+	document.getElementById("getNumber").innerHTML = phoneNumberValue;
+	var emergencyValue;
+	document.getElementById("getEmergency").innerHTML = emergencyValue;
+	var textValue;
+	document.getElementById("getText").innerHTML = textValue;
+	
+	
+	function profileLoaded(users){
+	}
+	
+	var users;
+	
+	rootRef.on("value", function(snapshot) {
+			users = snapshot.val();
+			document.getElementById("getEmail").innerHTML = users.users.email;
+			document.getElementById("getPass").innerHTML = users.users.password;
+			document.getElementById("getName").innerHTML = users.users.name;
+			document.getElementById("getAddress").innerHTML = users.users.address;
+			document.getElementById("getZip").innerHTML = users.users.zip;
+			document.getElementById("getNumber").innerHTML = users.users.phone;
+			document.getElementById("getEmergency").innerHTML = users.users.emergency;
+			document.getElementById("getText").innerHTML = users.users.customizedText;
+
+			profileLoaded(users);
+		}, function (errorObject) {
+		  console.log("The read failed: " + errorObject.code);
+});
+
+
 }//]]>  
 
+/*
 var FirebaseTokenGenerator = require("firebase-token-generator");
 var tokenGenerator = new FirebaseTokenGenerator("XeZtYAL6gzU7iI4zrFXLWmrQxmO6FIcdPHCDpJvk");
 var token = tokenGenerator.createToken({ uid: "custom:1", some: "arbitrary", data: "here" });
 
-ref.authWithCustomToken(AUTH_TOKEN, function(error, authData) {
+
+rootRef.authWithCustomToken(AUTH_TOKEN, function(error, authData) {
 admin : true;
   if (error) {
     console.log("Login Failed!", error);
@@ -390,6 +436,19 @@ admin : true;
     console.log("Login Succeeded!", authData);
   }
 });
+*/
+//var userRef = new Firebase('https://sosapp.firebaseio.com/users');
+//var newUserRef = userRef.push();
+	//newUserRef.set({ 'name': "#name" (, 'address': '#address' });
+
+//gets form data
+//$("#form input").each(function() {
+// data[theFieldName] = theFieldValue;
+//});
+
+//$('form').serializeArray(),
+
+
 
 </script>
 
@@ -497,34 +556,42 @@ admin : true;
          <h2>Profile</h2>
        <div class="form-group">
             <label for="txtRegEmail">Email address</label>
+            <p id="getEmail"></p>
             <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
         </div>
         <div class="form-group">
             <label for="txtRegPass">Password</label>
+             <p id="getPass"></p>
             <input type="password" class="form-control" id="txtPass" placeholder="Enter Password" name="password" />
         </div>
 		<div class="form-group">
             <label for="txtName">Full Name</label>
+             <p id="getName"></p>
             <input type="text" class="form-control" id="txtName" placeholder="Please enter in your full name" name="name" />
         </div>
 		<div class="form-group">
             <label for="txtAddress">Address</label>
+             <p id="getAddress"></p>
             <input type="text" class="form-control" id="txtAddress" placeholder="Enter Address (Number, Street, City, State)" name="address" />
         </div>
 		<div class="form-group">
             <label for="txtZip]">Zip Code</label>
+             <p id="getZip"></p>
             <input type="number" class="form-control" id="txtZip" placeholder="Enter Zip Code" name="zip" />
         </div>
 		<div class="form-group">
-            <label for="txtPhone">Phone Number</label>
+            <label for="txtNumber">Phone Number</label>
+             <p id="getPhone"></p>
             <input typ="number" class="form-control" id="txtPhone" placeholder="10 digit Phone Number" name="phone" />
         </div>
 		<div class="form-group">
             <label for="txtEmergency">Emergency Contact </label>
+             <p id="getEmergency"></p>
             <input type="number" class="form-control" id="txtPhone" placeholder="Enter emergency contact (10 digit) phone number" name="emergency" />
         </div>
 		<div class="form-group">
             <label for="txtText">Customized Text </label>
+             <p id="getText"></p>
             <input type="text" class="form-control" id="txtText" placeholder="Enter your customized text to send to your emergency contact in case of danger" name="customizedText" />
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
