@@ -54,32 +54,32 @@ window.onload=function(){
     // the main firebase reference
     var rootRef = new Firebase('https://sosapp.firebaseio.com/');
 
-function funct1(evt)
-{
-  var email = $('#txtEmail').text();
+// function funct1(evt)
+//{
+  //var email = $('#txtEmail').text();
 
-  var password = $('#txtPass').val();
+ // var password = $('#txtPass').val();
 
-  var  name = $('#txtName').text();
+ // var  name = $('#txtName').text();
   
-  var address = $('#txtAddress').text();
+ // var address = $('#txtAddress').text();
   
-  var zip = $('#zip').val();
+ // var zip = $('#zip').val();
   
-  var number = $('#phone').val();
+ // var number = $('#phone').val();
   
- var emergency =  $('#emergency').val();
+ //var emergency =  $('#emergency').val();
  
-  var text = $('#txtText').text();
+ // var text = $('#txtText').text();
 
-  var postRef = firebaseRef.push(); // create a new post
-postRef.set({Email : email, Password: password, Name: name, Address : address, Zip code : zip, Phone Number : number, Emergency Contact : emergency, Text : text});
-  evt.preventDefault();
-}
+ // var postRef = firebaseRef.push(); // create a new post
+//postRef.set({Email : email, Password: password, Name: name, Address : address, Zip code : zip, Phone Number : number, Emergency Contact : emergency, Text : text});
+  //evt.preventDefault();
+//}
 
-var submit = document.getElementsByTagName('button')[0];
+//var submit = document.getElementsByTagName('button')[0];
 
-submit.onclick = funct1;
+//submit.onclick = funct1; -->
 	
 	
 
