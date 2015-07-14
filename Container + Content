@@ -1,18 +1,53 @@
-#content {
+/* START OF ACTUAL IPHONE IMAGE */
+
+#iphone{
+	position:fixed;
+	z-index: -1;
+	margin-top: -30px;
+}
+
+/* END OF ACTUAL IPHONE IMAGE */
+
+
+/* START OF I DONT KNOW WHAT THIS IS (AMELIA CODED IT), BUT THIS IS IMPORTANT  */
+
+#centerdiv {
+	display: block;
+	width: 435px;
+	height: 790px;
+	position: absolute;
+	left: 50%;
+	margin-left: -218px;
+	z-index: -1;
+}
+
+/* END OF I DONT KNOW WHAT THIS IS (AMELIA CODED IT), BUT THIS IS IMPORTANT  */
+
+
+/* START OF CONTAINER & CONTENT */
+
+p {
     width:310px;
     font-size: 10px;
     text-transform: uppercase;
     float:left;
     padding:10px; 
 	overflow: auto;
-    
+	z-index: 1;
+	display: block;
+	position: absolute;
 }
 
+
 #container {
-	width: 315px;
-	height: 750px;
+	width: 300px;
+	height: 770px;
 	position: fixed;
-	margin-left: 39%;
-	margin-top: 5%;
-	
+	left: 50%;
+	margin-top: 80px;
+	margin-left: -138px;
+	z-index: 0;
+	display: block;
 }
+
+/* END OF CONTAINER / CONTENT */
