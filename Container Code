@@ -37,7 +37,7 @@
 	margin-left: -144px;
 	z-index: 0;
 	display: block;
-	background: #ededed;
+	background: #f7f7f7;
 }
 
 /* END OF CONTAINER / CONTENT */
