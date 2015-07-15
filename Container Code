@@ -29,49 +29,48 @@
 
 
 #container {
-	width: 300px;
-	height: 770px;
+	width: 312px;
+	height: 555px;
 	position: fixed;
 	left: 50%;
-	margin-top: 100px;
-	margin-left: -138px;
+	margin-top: 97px;
+	margin-left: -144px;
 	z-index: 0;
 	display: block;
+	background: #ededed;
 }
 
 /* END OF CONTAINER / CONTENT */
 
-/* START OF S. O. S. BANNER */
+/* START OF STATUS BAR */
 
-#banner {
-    width:310px;
-    font-size: 25px;
-    font-family: 'Lato', sans-serif;
-    font-family: Georgia, Serif;
-    text-transform: uppercase;
-    text-align:center;
-    padding:10px; 
-	overflow: auto;
-	z-index: 1;
-	position: absolute;
-	margin-top: 105px;
-	margin-left: -55px;
+#status{
+	position:fixed;
+	z-index: 2;
+	margin-top: 2px;
 }
 
-/* END OF S. O. S. BANNER */
+#centerstatus {
+	display: block;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: -158px;
+}
+
+
+/* END OF STATUS BAR */
 
 /* START OF LOGIN BUTTON */
 
 #loginbutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 15px;
+	margin-top: 35px;
 }
 
 #centerlogin {
 	display: block;
-	width: 435px;
-	height: 790px;
 	position: absolute;
 	left: 50%;
 	z-index: 2;
@@ -85,7 +84,7 @@
 #activatebutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 305px;
+	margin-top: 310px;
 }
 
 #centeractivate {
@@ -157,7 +156,7 @@
 #logo{
 	position:fixed;
 	z-index: 2;
-	margin-top: 120px;
+	margin-top: 140px;
 }
 
 #centerlogo{
@@ -165,5 +164,11 @@
 	position: absolute;
 	left: 50%;
 	z-index: 2;
-	margin-left: -105px;
+	margin-left: -85px;
 }
+
+
+
+
+
+
