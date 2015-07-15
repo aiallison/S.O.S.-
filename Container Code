@@ -1,3 +1,4 @@
+
 /* START OF ACTUAL IPHONE IMAGE */
 
 #iphone{
@@ -40,21 +41,24 @@
 
 /* END OF CONTAINER / CONTENT */
 
-#activatebutton{
-	position:fixed;
-	z-index: 2;
-	margin-top: 200px;
+/* START OF S. O. S. BANNER */
+
+#banner {
+    width:310px;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+    font-family: Georgia, Serif;
+    text-transform: uppercase;
+    text-align:center;
+    padding:10px; 
+	overflow: auto;
+	z-index: 1;
+	position: absolute;
+	margin-top: 105px;
+	margin-left: -55px;
 }
 
-#centeractivatebutton {
-	display: block;
-	width: 435px;
-	height: 790px;
-	position: absolute;
-	left: 50%;
-	margin-left: -95px;
-	z-index: 2;
-}
+/* END OF S. O. S. BANNER */
 
 /* START OF LOGIN BUTTON */
 
@@ -76,17 +80,82 @@
 
 /* END OF LOGIN BUTTON */
 
-#banner {
-    width:310px;
-    font-size: 25px;
-    font-family: 'Lato', sans-serif;
-    font-family: Georgia, Serif;
-    text-transform: uppercase;
-    text-align:center;
-    padding:10px; 
-	overflow: auto;
-	z-index: 1;
-	position: absolute;
-	margin-top: 105px;
-	margin-left: -55px;
+/* START OF ACTIVATE BUTTON */
+
+#activatebutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 255px;
 }
+
+#centeractivate {
+	display: block;
+	width: 435px;
+	height: 790px;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: -105px;
+}
+
+/* END OF ACTIVATE BUTTON */
+
+/* START OF HOME BUTTON */ 
+
+#homebutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 430px;
+}
+
+#centerhomebutton{
+	display: block;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: -145px;
+}
+
+/* END OF HOME BUTTON */
+
+/* START OF MAP BUTTON */ 
+
+#mapbutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 430px;
+}
+
+#centermap{
+	display: block;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: -30px;
+}
+
+/* END OF MAP BUTTON */
+
+/* START OF PROFILE BUTTON */ 
+
+#profilebutton{
+	position:fixed;
+	z-index: 2;
+	margin-top: 442.5px;
+}
+
+#centerprofile{
+	display: block;
+	position: absolute;
+	left: 50%;
+	z-index: 2;
+	margin-left: 70px;
+}
+
+/* END OF PROFILE BUTTON */
+
+
+
+
+
+
