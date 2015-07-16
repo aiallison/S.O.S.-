@@ -4,7 +4,6 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title> - S.O.S.</title>
-  
   <script type='text/javascript' src='/js/lib/dummy.js'></script>
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
   
@@ -30,12 +29,23 @@
   
     
       <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js"></script>
+      
+      <!--script for update button using jquery-->
+	  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     
   
   <style type='text/css'>
     form {
     display: none;
+    
+    #getPass{
+		text-overflow: clip;
+		text-overflow: ellipsis;
+		text-overflow: "…";
+    }
 }
+
+
   </style>
   
 
@@ -283,6 +293,17 @@ window.onload=function(){
             });
         });
 
+	  
+/*$( "update" ).click(function() {
+  			var value;
+  			switch ( $( "button" ).index( this ) ) {
+   		 		case 0 :
+      				emailValue = $( "getEmail" ).data( "txtEmail" );
+      				break;
+         $( "span" ).text( "" + emailValue  );
+	}
+}//end of update */	
+
     };
 
     /// Routing
@@ -376,7 +397,6 @@ window.onload=function(){
 	
 	var usersRef = rootRef.child("users");
 	//usersRef.set({
-				  
 
 }(window.jQuery, window.Firebase, window.Path))
 
@@ -419,7 +439,6 @@ window.onload=function(){
 		  console.log("The read failed: " + errorObject.code);
 });
 
-
 }//]]>  
 
 /*
@@ -449,8 +468,8 @@ admin : true;
 //$('form').serializeArray(),
 
 
-
 </script>
+
 
 
 </head>
@@ -594,10 +613,11 @@ admin : true;
              <p id="getText"></p>
             <!--<input type="text" class="form-control" id="txtText" placeholder="Enter your customized text to send to your emergency contact in case of danger" name="customizedText" />-->
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
-        
+        <!--<button type="submit" class="btn btn-primary" name="update" value="Update"> Update</button>-->
     </form>
     <!-- / PROFILE -->
+    
+    
     <hr />
     <!-- ALERT BOX -->
     <div id="alert" class="alert" role="alert">
