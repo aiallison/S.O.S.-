@@ -1,0 +1,49 @@
+<!DOC TYPE html>
+<html>
+<head>
+<title>Safety App</title>
+<link rel="shortcut icon" href="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-security-medium-icon.png"/>
+<link rel="stylesheet" href="styles.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="safety.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790"></div>
+
+
+<div id="container">
+
+
+<div id="centerlogin">
+
+<a href="login.html" target="_blank"> 
+
+
+<!-- 
+<img src="login.png" width="220" height="100" alt="Photo of login button"/></a>
+ -->
+
+
+<a href="login.html"><img id="loginbutton" src="login.png" width="220" height="100"/></a>
+
+<div id="banner" "width: 100%; text-align:center;"><center><h1>S. O. S</h1></center></div>
+</div>
+<br>
+<br>
+
+
+<div id="centeractivatebutton"><img id="activatebutton" src="activate.png" width="auto" height="200"></div>
+
+<div id="nav">
+</div> 
+
+<div id="centerhomebutton"><img id="homebutton" src="home.png" width="auto" height="80"></div>
+
+<div id="centermapbutton"><img id="mapbutton" src="map.png" width="auto" height="80"></div>
+
+<div id="centerprofilebutton"><img id="profilebutton" src="profile.png" width="auto" height="75"></div>
+
+</body>
+</html>
