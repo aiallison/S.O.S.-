@@ -391,7 +391,7 @@ window.onload=function(){
 	var zipValue;
 	document.getElementById("getZip").innerHTML = zipValue;
 	var phoneNumberValue;
-	document.getElementById("getNumber").innerHTML = phoneNumberValue;
+	document.getElementById("getPhone").innerHTML = phoneNumberValue;
 	var emergencyValue;
 	document.getElementById("getEmergency").innerHTML = emergencyValue;
 	var textValue;
@@ -410,7 +410,7 @@ window.onload=function(){
 			document.getElementById("getName").innerHTML = users.users.name;
 			document.getElementById("getAddress").innerHTML = users.users.address;
 			document.getElementById("getZip").innerHTML = users.users.zip;
-			document.getElementById("getNumber").innerHTML = users.users.phone;
+			document.getElementById("getPhone").innerHTML = users.users.phone;
 			document.getElementById("getEmergency").innerHTML = users.users.emergency;
 			document.getElementById("getText").innerHTML = users.users.customizedText;
 
@@ -557,42 +557,42 @@ admin : true;
        <div class="form-group">
             <label for="txtRegEmail">Email address</label>
             <p id="getEmail"></p>
-            <input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />
+            <!--<input type="email" class="form-control" id="txtEmail" placeholder="Enter email" name="email" />-->
         </div>
         <div class="form-group">
             <label for="txtRegPass">Password</label>
              <p id="getPass"></p>
-            <input type="password" class="form-control" id="txtPass" placeholder="Enter Password" name="password" />
+             <!--<input type="password" class="form-control" id="txtPass" placeholder="Enter Password" name="password" />-->
         </div>
 		<div class="form-group">
             <label for="txtName">Full Name</label>
              <p id="getName"></p>
-            <input type="text" class="form-control" id="txtName" placeholder="Please enter in your full name" name="name" />
+            <!-- <input type="text" class="form-control" id="txtName" placeholder="Please enter in your full name" name="name" />-->
         </div>
 		<div class="form-group">
             <label for="txtAddress">Address</label>
              <p id="getAddress"></p>
-            <input type="text" class="form-control" id="txtAddress" placeholder="Enter Address (Number, Street, City, State)" name="address" />
+             <!--<input type="text" class="form-control" id="txtAddress" placeholder="Enter Address (Number, Street, City, State)" name="address" />-->
         </div>
 		<div class="form-group">
             <label for="txtZip]">Zip Code</label>
              <p id="getZip"></p>
-            <input type="number" class="form-control" id="txtZip" placeholder="Enter Zip Code" name="zip" />
+             <!--<input type="number" class="form-control" id="txtZip" placeholder="Enter Zip Code" name="zip" />-->
         </div>
 		<div class="form-group">
             <label for="txtNumber">Phone Number</label>
              <p id="getPhone"></p>
-            <input typ="number" class="form-control" id="txtPhone" placeholder="10 digit Phone Number" name="phone" />
+             <!--<input typ="number" class="form-control" id="txtPhone" placeholder="10 digit Phone Number" name="phone" />-->
         </div>
 		<div class="form-group">
             <label for="txtEmergency">Emergency Contact </label>
              <p id="getEmergency"></p>
-            <input type="number" class="form-control" id="txtPhone" placeholder="Enter emergency contact (10 digit) phone number" name="emergency" />
+             <!--<input type="number" class="form-control" id="txtPhone" placeholder="Enter emergency contact (10 digit) phone number" name="emergency" />-->
         </div>
 		<div class="form-group">
             <label for="txtText">Customized Text </label>
              <p id="getText"></p>
-            <input type="text" class="form-control" id="txtText" placeholder="Enter your customized text to send to your emergency contact in case of danger" name="customizedText" />
+            <!--<input type="text" class="form-control" id="txtText" placeholder="Enter your customized text to send to your emergency contact in case of danger" name="customizedText" />-->
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
         
