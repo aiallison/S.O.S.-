@@ -14,7 +14,7 @@
 	#map {
   width: 312px;
   height: 555px;
-  left : 40.2%;
+  left : 40%;
   top : 7.5%;
   position : fixed;
 }
@@ -59,18 +59,32 @@
 	
 	.scroll {
 	  height: 100%;
-	}
+	  }
+	  
+	  #topBar{
+	  	width: 315px;
+	  	top : 12.1%;
+	  	margin: 0 auto; /*0 auto will allow you to center the element */
+	  	left : 1.9%;
+	  }
+	  
+	  #bottomBar{
+	  	width: 315px; /*So that the bars will fit to the screen*/
+	  	left : 1.9%;
+  		bottom : 19%;
+	  	margin: 0 auto; /*0 auto will allow you to center the element */
+	  }
 	</style>
 
   </head>
   <body ng-controller="MapCtrl">
-    <div class="bar bar-header bar-dark">
+    <div class="bar bar-header bar-dark" class="myBarClass" id="topBar">
       <h1 class="title">Map</h1>
     </div>
     <ion-content has-header="true" has-footer="true" scroll="false">
     <div id="map"></div>
     </ion-content>
-    <div class="bar bar-footer bar-dark">
+    <div class="bar bar-footer bar-dark" class="myBarClass" id="bottomBar">
       <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
     </div>
     
