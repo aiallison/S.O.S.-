@@ -112,7 +112,19 @@
                         height: 200px;
                         width: 200px;
                 }
-               
+                #backbtn 
+                {
+                    margin-top: 0.5px;
+                    height : 50px; 
+                    width : 50px;
+                    
+                }
+                #backbtn img{
+                	height : 40px;
+                	width : 40px;
+                	margin-left:260px;
+
+                }
                
                 ::-webkit-scrollbar
                 {
@@ -132,7 +144,13 @@
 <div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
 <div id="container">
 <!--<div id="backing">-->
+	<a href="index.html">
+	<div id="backbtn"> 
+		<img src="leftarrow.png">
+	</div>
+	</a>
 <div id="content">
+
                         <p>How To Use S.O.S. :
                         <ol type="1">
 						<li> Create an account </li>
