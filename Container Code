@@ -37,7 +37,7 @@
 	margin-left: -144px;
 	z-index: 0;
 	display: block;
-	background: #f7f7f7;
+	background: #eee;
 }
 
 /* END OF CONTAINER / CONTENT */
@@ -66,7 +66,7 @@
 #loginbutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 35px;
+	margin-top: 55px;
 }
 
 #centerlogin {
@@ -74,7 +74,7 @@
 	position: absolute;
 	left: 50%;
 	z-index: 2;
-	margin-left: -105px;
+	margin-left: -87px;
 }
 
 /* END OF LOGIN BUTTON */
@@ -84,7 +84,7 @@
 #activatebutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 310px;
+	margin-top: 125px;
 }
 
 #centeractivate {
@@ -94,7 +94,7 @@
 	position: absolute;
 	left: 50%;
 	z-index: 2;
-	margin-left: -105px;
+	margin-left: -125px;
 }
 
 /* END OF ACTIVATE BUTTON */
@@ -156,7 +156,7 @@
 #logo{
 	position:fixed;
 	z-index: 2;
-	margin-top: 140px;
+	margin-top: 160px;
 }
 
 #centerlogo{
@@ -164,7 +164,7 @@
 	position: absolute;
 	left: 50%;
 	z-index: 2;
-	margin-left: -85px;
+	margin-left: -90px;
 }
 
 
