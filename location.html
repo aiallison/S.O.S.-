@@ -1,0 +1,180 @@
+<html ng-app="ionic.example">
+  <head>
+    <meta charset="utf-8">
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    
+    <link href="http://code.ionicframework.com/0.9.25/css/ionic.min.css" rel="stylesheet">
+    <script src="http://code.ionicframework.com/0.9.25/js/ionic.bundle.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+    <!-- google maps javascript -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&sensor=true"></script>
+<style>
+	
+	#map {
+  width: 312px;
+  height: 555px;
+  left : 40.2%;
+  top : 7.5%;
+  position : fixed;
+}
+
+
+   #content{
+			letter-spacing: 1px;
+			overflow: auto;
+			width: 312px;
+			height: 555px;
+			text-align: justify;
+			padding-right: 8px;
+	}
+	
+	#iphone{
+		position:fixed;
+		z-index: -1;
+		margin-top: -25px;
+	}
+	
+	#centerdiv {
+		display: block;
+		width: 435px;
+		height: 790px;
+		position: absolute;
+		left: 50%;
+		margin-left: -218px;
+		z-index: -1;
+	}
+	
+	#container {
+		width: 312px;
+		height: 555px;
+		position: fixed;
+		left: 50%;
+		margin-top: 97px;
+		margin-left: -144px;
+		z-index: 0;
+		display: block;
+		background: #f7f7f7;
+	}
+	
+	.scroll {
+	  height: 100%;
+	}
+	</style>
+
+  </head>
+  <body ng-controller="MapCtrl">
+    <div class="bar bar-header bar-dark">
+      <h1 class="title">Map</h1>
+    </div>
+    <ion-content has-header="true" has-footer="true" scroll="false">
+    <div id="map"></div>
+    </ion-content>
+    <div class="bar bar-footer bar-dark">
+      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+    </div>
+    
+    <div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
+	<div id="container">
+	<div id="content">
+
+	<script>	
+	angular.module('ionic.example', ['ionic.service.platform', 'ionic.ui.content', 'ionic.ui.list', 'ionic.service.loading'])
+
+.factory('LocationService', function($q) {
+    
+    var latLong = null;
+    
+    var getLatLong = function(refresh) {
+        
+        var deferred = $q.defer();
+        
+        if( latLong === null || refresh ) {
+        
+            console.log('Getting lat long');
+            navigator.geolocation.getCurrentPosition(function(pos) {
+                console.log('Position=')
+                console.log(pos);
+                latLong =  { 'lat' : pos.coords.latitude, 'long' : pos.coords.longitude } 
+                deferred.resolve(latLong);
+
+            }, function(error) {
+                console.log('Got error!');
+                console.log(error);
+                latLong = null
+                
+                deferred.reject('Failed to Get Lat Long')
+
+            });
+            
+        }  else {
+            deferred.resolve(latLong);
+        }
+        
+        return deferred.promise;
+
+    };      
+    
+    return {
+        
+        getLatLong : getLatLong
+        
+    }
+})
+
+.controller('MapCtrl', function($scope, $ionicLoading, LocationService) {
+    function initialize() {
+        var mapOptions = {
+            center: new google.maps.LatLng(43.07493,-89.381388),
+            zoom: 16,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"),
+        mapOptions);
+        
+        // Stop the side bar from dragging when mousedown/tapdown on the map
+        google.maps.event.addDomListener(document.getElementById('map'), 'mousedown', function(e) {
+            e.preventDefault();
+            return false;
+        });
+        
+        $scope.map = map;
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
+    
+    $scope.centerOnMe = function() {
+        if(!$scope.map) {
+            return;
+        }
+        
+        $scope.loading = $ionicLoading.show({
+            content: 'Getting current location...',
+            showBackdrop: false
+        });
+        
+        LocationService.getLatLong().then(
+            function(latLong) {
+                $scope.latLong = latLong;
+                console.log('LatLong=');
+                console.log($scope.latLong);
+                
+                $scope.map.setCenter(new google.maps.LatLng(latLong.lat, latLong.long));
+                $scope.loading.hide();
+
+            },
+            
+            function(error) {
+                alert(error);
+            }
+        )
+        
+    };
+});
+</script>
+</div>
+</div>
+</div>
+  </body>
+</html>
+
