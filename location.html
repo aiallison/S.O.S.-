@@ -75,6 +75,15 @@
   		bottom : 19%;
 	  	margin: 0 auto; /*0 auto will allow you to center the element */
 	  }
+	  #homebtn{
+	  	width : 50px;
+	  	height: 50px;
+	  	margin : 0 auto;
+	  }
+	  #homebtn img{
+	  	width : 50px;
+	  	height : 50px;
+	  }
 	   ::-webkit-scrollbar
                 {
                         height: 10px;
@@ -90,9 +99,11 @@
 
   </head>
   <body ng-controller="MapCtrl">
+  	
     <div class="bar bar-header bar-dark" class="myBarClass" id="topBar">
       <h1 class="title">Map</h1>
     </div>
+    
     <ion-content has-header="true" has-footer="true" scroll="false">
     <div id="map"></div>
     </ion-content>
@@ -102,6 +113,7 @@
     
     <div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
 	<div id="container">
+	
 	<div id="content">
 
 	<script>	
@@ -151,7 +163,7 @@
 .controller('MapCtrl', function($scope, $ionicLoading, LocationService) {
     function initialize() {
         var mapOptions = {
-            center: new google.maps.LatLng(43.07493,-89.381388),
+            center: new google.maps.LatLng(37.78,-122.41),
             zoom: 16,
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -201,6 +213,7 @@
 </div>
 </div>
 </div>
+<div id="homebtn"><a href="index.html"><img src="homebtn.png">
   </body>
 </html>
 
