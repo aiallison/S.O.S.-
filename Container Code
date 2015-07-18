@@ -67,14 +67,14 @@
 	position:fixed;
 	z-index: 2;
 	margin-top: 55px;
+	margin-left: 70px;
 }
 
-#centerlogin {
-	display: block;
-	position: absolute;
-	left: 50%;
-	z-index: 2;
-	margin-left: -87px;
+
+#centerlogin img{
+	width: 180px;
+	height: auto;
+
 }
 
 /* END OF LOGIN BUTTON */
@@ -84,17 +84,17 @@
 #activatebutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 125px;
 }
 
-#centeractivate {
+#centeractivate img {
 	display: block;
-	width: 435px;
-	height: 790px;
+	width: 270px;
+	height: auto;
 	position: absolute;
 	left: 50%;
 	z-index: 2;
-	margin-left: -125px;
+	margin-left: 30px;
+	margin-top: 155px;
 }
 
 /* END OF ACTIVATE BUTTON */
@@ -104,15 +104,17 @@
 #homebutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 430px;
 }
 
-#centerhomebutton{
+#centerhome img{
 	display: block;
 	position: absolute;
+	height: 80px;
+	width: auto;
 	left: 50%;
 	z-index: 2;
-	margin-left: -145px;
+	margin-left: 5px;
+	margin-top: 465px;
 }
 
 /* END OF HOME BUTTON */
@@ -122,15 +124,16 @@
 #mapbutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 430px;
 }
 
-#centermap{
+#centermap img{
 	display: block;
+	height: 80px;
+	width: auto;
 	position: absolute;
-	left: 50%;
 	z-index: 2;
-	margin-left: -30px;
+	margin-left: 130px;
+	margin-top: 465px;
 }
 
 /* END OF MAP BUTTON */
@@ -140,15 +143,16 @@
 #profilebutton{
 	position:fixed;
 	z-index: 2;
-	margin-top: 442.5px;
 }
 
-#centerprofile{
+#centerprofile img{
 	display: block;
+	height: 75px;
+	width: auto;
 	position: absolute;
-	left: 50%;
 	z-index: 2;
-	margin-left: 70px;
+	margin-left: 225px;
+	margin-top: 470px;
 }
 
 /* END OF PROFILE BUTTON */
@@ -166,22 +170,3 @@
 	z-index: 2;
 	margin-left: -90px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
