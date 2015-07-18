@@ -37,7 +37,7 @@
 	margin-left: -144px;
 	z-index: 0;
 	display: block;
-	background: #eee;
+	background: white;
 }
 
 /* END OF CONTAINER / CONTENT */
@@ -109,12 +109,12 @@
 #centerhome img{
 	display: block;
 	position: absolute;
-	height: 80px;
+	height: 110px;
 	width: auto;
 	left: 50%;
 	z-index: 2;
-	margin-left: 5px;
-	margin-top: 465px;
+	margin-left: 8px;
+	margin-top: 445px;
 }
 
 /* END OF HOME BUTTON */
@@ -128,12 +128,12 @@
 
 #centermap img{
 	display: block;
-	height: 80px;
+	height: 130px;
 	width: auto;
 	position: absolute;
 	z-index: 2;
-	margin-left: 130px;
-	margin-top: 465px;
+	margin-left: 120px;
+	margin-top: 430px;
 }
 
 /* END OF MAP BUTTON */
@@ -147,12 +147,12 @@
 
 #centerprofile img{
 	display: block;
-	height: 75px;
+	height: 135px;
 	width: auto;
 	position: absolute;
 	z-index: 2;
 	margin-left: 225px;
-	margin-top: 470px;
+	margin-top: 430px;
 }
 
 /* END OF PROFILE BUTTON */
