@@ -80,6 +80,10 @@
 	header#top {
 	width:400px;
 }
+	#settingsbtn{
+	width : 40px;
+	height:40px;
+	}
 
 	::-webkit-scrollbar
                 {
@@ -662,7 +666,7 @@ admin : true;
              <p id="getText"></p>
             <!--<input type="text" class="form-control" id="txtText" placeholder="Enter your customized text to send to your emergency contact in case of danger" name="customizedText" />-->
         </div>
-        <!--<button type="submit" class="btn btn-primary" name="update" value="Update"> Update</button>-->
+        <img src="settings.png"  id="settingsbtn">
     </form>
     <!-- / PROFILE -->
     
