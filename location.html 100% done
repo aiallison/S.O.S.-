@@ -77,6 +77,12 @@
 	  #backbtn{
 	  	width : 35px;
 	  	height : 35px;
+	  	margin-left:125px;
+	  }
+	  #listbtn{
+	  	width : 35px;
+	  	height:35px;
+	  	margin-left:10px;
 	  }
 	   ::-webkit-scrollbar
                 {
@@ -94,7 +100,7 @@
   <body ng-controller="MapCtrl">
   	
     <div class="bar bar-header bar-dark" class="myBarClass" id="topBar">
-      <h1 class="title">Map</h1>
+      <h1 class="title">Your Location</h1>
     </div>
     
     <ion-content has-header="true" has-footer="true" scroll="false">
@@ -103,6 +109,7 @@
     <div class="bar bar-footer bar-dark" class="myBarClass" id="bottomBar">
       <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
       <a href="index.html"><img src="leftarrow.png" id="backbtn"></a>
+      <a href="maplist.html"><img src="list.png" id="listbtn"></a>
     </div>
     
     <div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
