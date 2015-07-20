@@ -61,7 +61,7 @@
 
 /* END OF STATUS BAR */
 
-/* START OF LOGIN BUTTON */
+/* START OF QUESTION BUTTON */
 
 #questionbutton{
 	position:fixed;
@@ -77,8 +77,7 @@
 
 }
 
-
-/* END OF LOGIN BUTTON */
+/* END OF QUESTION BUTTON */
 
 /* START OF ACTIVATE BUTTON */
 
