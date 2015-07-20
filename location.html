@@ -2,8 +2,7 @@
   <head>
     <meta charset="utf-8">
     <title>Map</title>
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">  
     <link href="http://code.ionicframework.com/0.9.25/css/ionic.min.css" rel="stylesheet">
     <script src="http://code.ionicframework.com/0.9.25/js/ionic.bundle.min.js"></script>
 	<link rel="stylesheet" href="styles.css">
@@ -64,7 +63,7 @@
 	  
 	  #topBar{
 	  	width: 315px;
-	  	top : 12.1%;
+	  	top : 11.1%;
 	  	margin: 0 auto; /*0 auto will allow you to center the element */
 	  	left : 1.9%;
 	  }
@@ -72,17 +71,12 @@
 	  #bottomBar{
 	  	width: 315px; /*So that the bars will fit to the screen*/
 	  	left : 1.9%;
-  		bottom : 19%;
+  		bottom : 20.05%;
 	  	margin: 0 auto; /*0 auto will allow you to center the element */
 	  }
-	  #homebtn{
-	  	width : 50px;
-	  	height: 50px;
-	  	margin : 0 auto;
-	  }
-	  #homebtn img{
-	  	width : 50px;
-	  	height : 50px;
+	  #backbtn{
+	  	width : 35px;
+	  	height : 35px;
 	  }
 	   ::-webkit-scrollbar
                 {
@@ -96,7 +90,6 @@
                         background: #353a3d; /*change the color of the scrollbar face here*/
                 }
 	</style>
-
   </head>
   <body ng-controller="MapCtrl">
   	
@@ -109,13 +102,13 @@
     </ion-content>
     <div class="bar bar-footer bar-dark" class="myBarClass" id="bottomBar">
       <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Find Me</a>
+      <a href="index.html"><img src="leftarrow.png" id="backbtn"></a>
     </div>
     
     <div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
 	<div id="container">
 	
 	<div id="content">
-
 	<script>	
 	angular.module('ionic.example', ['ionic.service.platform', 'ionic.ui.content', 'ionic.ui.list', 'ionic.service.loading'])
 
@@ -213,7 +206,7 @@
 </div>
 </div>
 </div>
-<div id="homebtn"><a href="index.html"><img src="homebtn.png">
+
   </body>
 </html>
 
