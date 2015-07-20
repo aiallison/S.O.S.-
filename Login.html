@@ -1,54 +1,104 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title> - S.O.S.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="http://code.ionicframework.com/0.9.25/js/ionic.bundle.min.js"></script>
   <script type='text/javascript' src='/js/lib/dummy.js'></script>
   <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  
-    
+      
       <script type='text/javascript' src="https://cdn.firebase.com/js/client/1.1.1/firebase.js"></script>
-    
-  
-    
+       
       <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    
-  
-    
+
       <script type='text/javascript' src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    
-  
     
       <script type='text/javascript' src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     
-  
-    
       <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/jquery-serialize-object/2.0.0/jquery.serialize-object.compiled.js"></script>
-    
   
-    
       <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/path.js/0.8.4/path.min.js"></script>
-      
-      <!--script for update button using jquery-->
-	  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     
   
   <style type='text/css'>
     form {
     display: none;
+    }
     
     #getPass{
 		text-overflow: clip;
 		text-overflow: ellipsis;
 		text-overflow: "…";
     }
+ 	#content{
+			letter-spacing: 1px;
+			overflow: auto;
+			width: 312px;
+			height: 555px;
+			text-align: justify;
+			padding-right: 8px;
+	}
+	
+	#iphone{
+		position:fixed;
+		z-index: -1;
+		margin-top: -25px;
+	}
+	
+	#centerdiv {
+		display: block;
+		width: 435px;
+		height: 790px;
+		position: absolute;
+		left: 50%;
+		margin-left: -218px;
+		z-index: -1;
+	}
+	
+	#container {
+		width: 312px;
+		height:555px;
+		position: fixed;
+		left: 50%;
+		margin-top: 97px;
+		margin-left: -143px;
+		z-index: 0;
+		display: block;
+		background: #f7f7f7;
+	}
+
+	.navbar-nav>li{
+		width: 100px;
+		margin-left: -20px;
+		margin-right: 1px;
+	}
+	#pagecontainer{
+		overflow-y:scroll;
+		overflow-x:scroll;
+	}
+	header#top {
+	width:400px;
 }
+
+	::-webkit-scrollbar
+                {
+                        height: 10px;
+                        width: 2px;
+                   		background: white; 
+                }
+               
+
+ 	::-webkit-scrollbar-thumb:vertical
+                {
+                        background: #353a3d; /*change the color of the scrollbar face here*/
+                }
 
 
   </style>
-  
-
+<div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790">
+<div id="container">
+<div id="content">
 
 <script type='text/javascript'>//<![CDATA[ 
 
@@ -474,6 +524,7 @@ admin : true;
 
 </head>
 <body>
+  <div id="pagecontainer">	
   <header class="navbar navbar-static-top navbar-inverse" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
@@ -482,28 +533,26 @@ admin : true;
  <span class="icon-bar"></span>
  <span class="icon-bar"></span>
 
-            </button> <a href="#" class="navbar-brand">S.O.S.</a>
+            </button><!-- <a href="#" class="navbar-brand">S.O.S.</a>  -->
 
         </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-            <ul class="nav navbar-nav">
-                <li> <a href="#/">Login</a>
+        <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse"> <!-- class="collapse navbar-collapse bs-navbar-collapse"-->
+            <ul class="nav navbar-nav"> 
+            <!-- li elements removed-->
+            	<li><a href="index.html">Home</a>
+                <li><a href="#/">Login</a>
+                
+                <li><a href="#/logout">Logout</a>
+              
+          		<li><a href="#/register">Register</a>
+         
+               <li><a href="#/profile">Profile</a>
 
-                </li>
-                <li> <a href="#/logout">Logout</a>
-
-                </li>
-                <li> <a href="#/register">Register</a>
-
-                </li>
-                <li> <a href="#/profile">Profile</a>
-
-                </li>
-            </ul>
+           </ul>
         </nav>
     </div>
 </header>
-<div id="container" class="container">
+<!-- <div id="container" class="container"> -->
     <!-- LOGIN -->
     <form id="frmLogin" role="form">
          <h2>Login</h2>
@@ -627,7 +676,10 @@ admin : true;
     </div>
     <!-- / ALERT BOX -->
 </div>
-  
+</div>
+</div>
+</div>
+</div>
 </body>
 
 
