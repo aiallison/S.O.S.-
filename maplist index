@@ -1,0 +1,144 @@
+<!DOC TYPE html>
+	<html>
+		<head>
+		
+			<link rel="shortcut icon" href="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Status-security-medium-icon.png"/>
+			<link rel="stylesheet" href="styles.css">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script src="safety.js" type="text/javascript"></script>
+	
+			<meta charset=utf-8 />
+			<title>S.O.S</title>
+			<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	
+			<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+			<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+			<!-- button photos 	 -->
+			<link rel="stylesheet" href="styles.css">
+				<style>
+			
+			    	#iphone{
+						position:fixed;
+						z-index: -1;
+						margin-top: -25px;
+					}
+				
+					#centerdiv {
+						display: block;
+						width: 435px;
+						height: 790px;
+						position: absolute;
+						left: 50%;
+						margin-left: -218px;
+						z-index: -1;
+					}
+				
+				
+			  		body { margin:0; padding:0; }
+			  
+			  		#map {
+						width: 312px;
+						height: 555px;
+						position: fixed;
+						left: 50%;
+						margin-top: 97px;
+						margin-left: -144px;
+						z-index: 5;
+						display: block;
+					}
+			  
+/* 			  buttons */
+			  
+					#container {
+						width: 312px;
+						height: 50px;
+						position: fixed;
+						left: 50%;
+						margin-top: 97px;
+						margin-left: -144px;
+						z-index: 10;
+						display: block;
+			
+					}
+		/* START OF PROFILE BUTTON */ 
+
+					#profilebutton{
+						position:fixed;
+						z-index: 10;
+						margin-top: 500px;
+						width: auto;
+						height: 50px;
+					}
+
+					#centerprofile{
+						display: block;
+						position: absolute;
+						left: 50%;
+						z-index: 10;
+						margin-left: 70px;
+					}
+
+			/* END OF PROFILE BUTTON */
+
+
+			/* START OF HOME BUTTON */ 
+
+					#homebutton{
+						position:fixed;
+						z-index: 10;
+						margin-top: 500px;
+						width: auto;
+						height: 50px;
+					}
+
+					#centerhomebutton{
+						display: block;
+						position: absolute;
+						left: 50%;
+						z-index: 10;
+						margin-left: -145px;
+					}
+
+			/* END OF HOME BUTTON */
+
+			/* START OF MAP BUTTON */ 
+	
+					#mapbutton{
+						position:fixed;
+						z-index: 10;
+						margin-top: 500px;
+						width: auto;
+						height: 50px;
+					}
+
+					#centermap{
+						display: block;
+						position: absolute;
+						left: 50%;
+						z-index: 10;
+						margin-left: -30px;
+					}
+
+			/* END OF MAP BUTTON */
+
+				</style>
+
+	</head>
+		<body>
+			<div class="iphone">
+			<div id="centerdiv"><img id="iphone" src="iPhone_6.png" width="auto" height="790"></div>
+			<div id='map'></div>
+			<script src='script.js'></script>
+			<div id="container">
+
+			<!-- 	buttons -->
+
+			<a href = "file:///Users/demouser/Downloads/Safety%20Code/index.html"><div id="centerhome"><img id="homebutton" src="home.png" width="auto" height="80"></div></a>
+
+			<a href = "file:///Users/demouser/Documents/MapBoxGroupCode%202/indexfinal.html"><div id="centermap"><img id="mapbutton" src="map.png" width="auto" height="80"></div></a>
+
+			<div id="centerprofile"><img id="profilebutton" src="profile.png" width="auto" height="65"></div>
+
+		</body>
+</html>
